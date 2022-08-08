@@ -22,6 +22,7 @@ namespace Library.Controllers
         [Route("books")]
         public async Task<IActionResult> GetBooksAsync(string? order)
         {
+            //throw new AccessViolationException("Violation Exception while accessing the resource.");
             return Ok(await _bookService.GetBooksAsync(order ??= "id"));
         }
 

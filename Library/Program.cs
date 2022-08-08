@@ -2,6 +2,7 @@ using AutoMapper;
 using Library.DAL;
 using Library.DAL.Interfaces;
 using Library.DAL.Repositories;
+using Library.Middlewares;
 using Library.Service.Implementations;
 using Library.Service.Interfaces;
 using Library.Service.Mapping;
@@ -38,6 +39,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseMiddleware<RequestConsoleLogMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
