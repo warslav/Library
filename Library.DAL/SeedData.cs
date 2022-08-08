@@ -9,9 +9,9 @@ namespace Library.DAL
 {
     public class SeedData
     {
-        public List<Book> Books { get; }
-        public List<Rating> Ratings { get; }
-        public List<Review> Reviews { get; }
+        public List<Book> Books { get; } = new List<Book>();
+        public List<Rating> Ratings { get; } = new List<Rating>();
+        public List<Review> Reviews { get; } = new List<Review>();
 
         public SeedData()
         {
